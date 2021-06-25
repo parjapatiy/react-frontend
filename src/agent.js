@@ -3,7 +3,7 @@ import _superagent from 'superagent';
 
 const superagent = superagentPromise(_superagent, global.Promise);
 
-const API_ROOT = 'https://john.squareops.xyz:3000/api';
+const API_ROOT = 'https://john.squareops.xyz/api';
 
 const encode = encodeURIComponent;
 const responseBody = res => res.body;
