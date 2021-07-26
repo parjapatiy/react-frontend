@@ -1,9 +1,9 @@
-
 FROM  node:latest
+ARG backend
+ENV REACT_APP_BACKEND=$backend
 RUN mkdir -p /home/node/yan
 WORKDIR /home/node/yan
 COPY . .
-RUN sed -i 's/localhost/URL/' src/agent.js
 RUN npm install
 EXPOSE 4100
 CMD ["npm","start"]
