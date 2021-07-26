@@ -1,9 +1,12 @@
-FROM  node:latest
+FROM  node:alpine3.14 as build-step
 ARG backend
 ENV REACT_APP_BACKEND=$backend
-RUN mkdir -p /home/node/yan
-WORKDIR /home/node/yan
-COPY . .
+RUN mkdir /app
+WORKDIR /app
+COPY package.json /app
 RUN npm install
-EXPOSE 4100
-CMD ["npm","start"]
+COPY . .
+RUN npm run build
+
+FROM nginx:alpine
+COPY --from=build-step /app/build  /usr/share/nginx/html
