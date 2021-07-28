@@ -3,8 +3,8 @@
 
          "image": "421320058418.dkr.ecr.ap-south-1.amazonaws.com/yanshul-frontend:v7",
          "name": "frontend",
-         "cpu": "250",
-         "memory": "250",
+         "cpu": 250,
+         "memory": 250,
          "portMappings": [{
                "containerPort": 80,
                "hostPort": 0,
