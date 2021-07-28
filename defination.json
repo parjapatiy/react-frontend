@@ -1,4 +1,5 @@
-[
+{
+    "containerDefinitions": [ 
     {
       "cpu": 250,  
       "memory": 250,
@@ -6,3 +7,4 @@
       "name": "frontend"
     }
 ]
+}
