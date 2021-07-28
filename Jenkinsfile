@@ -4,7 +4,7 @@ pipeline {
         AWS_ACCOUNT_ID="421320058418"
         AWS_DEFAULT_REGION="ap-south-1" 
         IMAGE_REPO_NAME="yanshul-frontend"
-        IMAGE_TAG="v6"
+        IMAGE_TAG="v7"
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
     }
    
