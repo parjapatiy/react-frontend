@@ -1,15 +1,15 @@
 [
-{
-	
-		"portMappings": [{
-			"containerPort": 3000,
-			"hostPort": 0,
-			"protocol": "tcp"
-		}],
+     {
+	"portMappings": [{
+		"containerPort": 3000,
+		"hostPort": 0,
+		"protocol": "tcp"
+        }],
 	
 	"cpu": 250,
 	"memory": 250,
 	"image": "421320058418.dkr.ecr.ap-south-1.amazonaws.com/yanshul-frontend:v6",
 	"name": "frontend"
-}
+		
+     }
 ]
