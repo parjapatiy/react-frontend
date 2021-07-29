@@ -42,7 +42,8 @@ pipeline {
       
      stage('Deploy in ECS') {
             steps {
-                        sh("/usr/local/bin/aws ecs register-task-definition --region ap-south-1 --family yanshul-frontend --execution-role-arn arn:aws:iam::421320058418:role/ecsTaskExecutionRole --requires-compatibilities EC2 --network-mode bridge --cpu 250 --memory 250 --container-definitions file://ecs/defination.json")
+                        sh "chmod 744 ecs/task.sh"
+                        sh "./ecs/task.sh"
                         sh("aws ecs update-service --cluster yanshul --service frontend --task-definition yanshul-frontend:17")
                     }
                 }
