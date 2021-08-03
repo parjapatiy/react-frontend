@@ -1,22 +1,18 @@
-{
-   "containerDefinitions": [{
-
-         "image": "",
-         "name": "frontend",
-         "cpu": 250,
-         "memory": 250,
-         "portMappings": [{
-               "containerPort": 80,
-               "hostPort": 0,
-               "protocol": "tcp"
-            }]
-      }],
-   
-   "executionRoleArn": "arn:aws:iam::421320058418:role/ecsTaskExecutionRole",
-   "family": "yanshul-frontend",
-   
-   "networkMode": "bridge",
-   "requiresCompatibilities": [
-       "EC2"
-    ]
-}
+[
+    {
+      "
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "protocol": "tcp",
+          "containerPort": 80
+        },
+        
+      ],
+      
+      "image": "",
+      "
+      "essential": true,
+      "name": "frontend"
+    }
+]
