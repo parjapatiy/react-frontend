@@ -1,7 +1,7 @@
 {
    "containerDefinitions": [{
 
-         "image": "421320058418.dkr.ecr.ap-south-1.amazonaws.com/yanshul-frontend:v7",
+         "image": "",
          "name": "frontend",
          "cpu": 250,
          "memory": 250,
